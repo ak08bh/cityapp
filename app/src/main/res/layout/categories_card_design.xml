@@ -11,7 +11,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="10dp"
+        android:padding="8dp"
         android:background="@drawable/card2">
 
 
@@ -20,16 +20,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/restaurants"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:fontFamily="@font/baloo" />
 
         <ImageView
             android:id="@+id/image_cl"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
             android:src="@drawable/restaurant"
             android:layout_alignParentRight="true"
-            android:layout_below="@id/text_cl"
             android:layout_alignParentBottom="true"/>
     </RelativeLayout>
 

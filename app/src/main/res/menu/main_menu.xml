@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:title="@string/home"
+            android:icon="@drawable/home_navigation"/>
+
+        <item
+            android:id="@+id/nav_search"
+            android:title="@string/search"
+            android:icon="@drawable/navigation_search"/>
+
+        <item
+            android:id="@+id/nav_all_categories"
+            android:title="@string/all_categories"
+            android:icon="@drawable/all_category_navigation"/>
+
+        <item
+            android:id="@+id/nav_add_missing_place"
+            android:title="@string/add_missing_place"
+            android:icon="@drawable/add_missing_place_navigation"/>
+
+    </group>
+
+    <item android:title="profile">
+        <menu>
+            <group
+                android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/nav_login"
+                    android:title="@string/login"
+                    android:icon="@drawable/navigation_login"/>
+
+                <item
+                    android:id="@+id/nav_profile"
+                    android:title="@string/profile"
+                    android:icon="@drawable/navigation_profile"/>
+
+                <item
+                    android:id="@+id/nav_logout"
+                    android:title="@string/logout"
+                    android:icon="@drawable/navigation_logout"/>
+
+            </group>
+
+        </menu>
+    </item>
+
+    <item android:title="Categories">
+        <menu>
+            <group
+                android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/nav_restaurants"
+                    android:title="@string/restaurants"
+                    android:icon="@drawable/navigation_restaurant"/>
+
+                <item
+                    android:id="@+id/nav_bank"
+                    android:title="@string/bank"
+                    android:icon="@drawable/bank"/>
+
+                <item
+                    android:id="@+id/nav_education"
+                    android:title="@string/education"
+                    android:icon="@drawable/navigation_education"/>
+
+                <item
+                    android:id="@+id/nav_shops"
+                    android:title="@string/shops"
+                    android:icon="@drawable/store"/>
+
+            </group>
+
+        </menu>
+    </item>
+
+    <item android:title="Share">
+        <menu>
+            <group
+                android:checkableBehavior="none">
+
+                <item
+                    android:id="@+id/nav_share"
+                    android:title="@string/share"
+                    android:icon="@drawable/navigation_share"/>
+
+                <item
+                    android:id="@+id/nav_rate_us"
+                    android:title="@string/rate_us"
+                    android:icon="@drawable/rate_us_navigation"/>
+
+            </group>
+
+        </menu>
+    </item>
+
+
+
+</menu>

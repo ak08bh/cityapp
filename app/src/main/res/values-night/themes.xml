@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.CityGuideApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!-- Secondary brand color. -->
+
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="navigationTheme">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorControlHighlight">@color/colorAccent</item>
+    </style>
+</resources>

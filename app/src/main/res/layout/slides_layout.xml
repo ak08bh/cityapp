@@ -8,7 +8,7 @@
     <ImageView
         android:id="@+id/slider_image"
         android:layout_width="wrap_content"
-        android:layout_height="600dp"
+        android:layout_height="400dp"
         android:src="@drawable/location_search"
         android:padding="20dp"/>
 
@@ -18,14 +18,13 @@
         android:layout_height="wrap_content"
         android:text="@string/first_slide_title"
         android:layout_gravity="center_horizontal"
-        android:textSize="45sp"
+        android:textSize="30sp"
         android:fontFamily="@font/black"/>
 
     <TextView
         android:id="@+id/slider_desc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
         android:text="@string/first_slide_desc"
         />
 
