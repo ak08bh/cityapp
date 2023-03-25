@@ -7,8 +7,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.res.Resources;
-import android.graphics.BitmapFactory;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -17,6 +16,7 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.example.cityguideapp.Common.LoginSignup.RetalierStartupScreen;
 import com.example.cityguideapp.HelperClasses.HomeAdapter.CategoriesHelperClass;
 import com.example.cityguideapp.HelperClasses.HomeAdapter.CategoryAdapter;
 import com.example.cityguideapp.HelperClasses.HomeAdapter.CategoryCardAdapter;
@@ -25,10 +25,9 @@ import com.example.cityguideapp.HelperClasses.HomeAdapter.FeaturedAdapter;
 import com.example.cityguideapp.HelperClasses.HomeAdapter.FeaturedHelperClass;
 import com.example.cityguideapp.R;
 import com.google.android.material.navigation.NavigationView;
-
 import java.util.ArrayList;
 
-public class UserDashboard extends AppCompatActivity implements  NavigationView.OnNavigationItemSelectedListener {
+public class UserDashboard extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     static final float END_SCALE = 0.7f;
     RecyclerView featured_recycler, mostViewedRecycler, addCategoryRecycler;
@@ -40,7 +39,6 @@ public class UserDashboard extends AppCompatActivity implements  NavigationView.
 
     DrawerLayout drawerLayout;
     NavigationView navigationView;
-    private boolean isDrawerFixed;
 
 
     @Override
@@ -57,20 +55,15 @@ public class UserDashboard extends AppCompatActivity implements  NavigationView.
         addCategoryRecycler = findViewById(R.id.addCategoryRecycler);
         IconMenu = findViewById(R.id.icon_menu);
 
-        isDrawerFixed = getResources().getBoolean(R.bool.isDrawerFixed);
-
 
         drawerLayout = findViewById(R.id.drawer_layout);
-        navigationView = findViewById(R.id.navigation_view);
+        navigationView = (NavigationView) findViewById(R.id.navigation_view);
 
-if(!isDrawerFixed)
-{
-    navigationView.bringToFront();
-    navigationView.setNavigationItemSelectedListener(this);
-    navigationView.setCheckedItem(R.id.nav_home);
+
+
     navigationDrawer();
 
-}
+
 
         featuredRecycler();
         mostViewRecycle();
@@ -79,7 +72,9 @@ if(!isDrawerFixed)
 
     private void navigationDrawer() {
 
-
+        navigationView.bringToFront();
+        navigationView.setNavigationItemSelectedListener(this);
+        navigationView.setCheckedItem(R.id.nav_home);
         IconMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -122,10 +117,11 @@ if(!isDrawerFixed)
         }
     }
 
-    public boolean onNavigationItemSelected(@NonNull MenuItem item)
+    public void callRetailerScreens(View view)
     {
-        return true;
+     startActivity(new Intent(UserDashboard.this, RetalierStartupScreen.class));
     }
+
 
     private void addCategory() {
         addCategoryRecycler.setHasFixedSize(true);
@@ -179,4 +175,15 @@ if(!isDrawerFixed)
 
     }
 
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item)
+    {
+        switch (item.getItemId())
+        {
+            case R.id.nav_all_categories:
+                startActivity(new Intent(UserDashboard.this,AllCategory.class));
+                break;
+        }
+        return true;
+    }
 }

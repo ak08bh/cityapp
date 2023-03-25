@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="420dp"
+    android:layout_height="200dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="2dp"
     app:cardElevation="8dp">
 
     <RelativeLayout
-        android:layout_width="300dp"
-        android:layout_height="150dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:padding="10dp">
 
         <ImageView
             android:id="@+id/mv_image"
-            android:layout_width="100dp"
-            android:layout_height="150dp"
+            android:layout_width="150dp"
+            android:layout_height="200dp"
             android:src="@drawable/mcdonalds"
             android:scaleType="centerCrop"/>
 
@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:text="McDonald's"
             android:layout_toRightOf="@id/mv_image"
-            android:textSize="20sp"
+            android:textSize="30sp"
             android:fontFamily="@font/baloo"
             android:layout_marginLeft="10dp"/>
 
@@ -33,7 +33,7 @@
             android:id="@+id/mv_rating"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/Widget.AppCompat.RatingBar.Small"
+            style="@style/Widget.AppCompat.RatingBar"
             android:rating="4"
             android:layout_toRightOf="@id/mv_image"
             android:layout_below="@id/mv_title"
@@ -47,6 +47,7 @@
             android:layout_toRightOf="@id/mv_image"
             android:layout_below="@id/mv_rating"
             android:layout_marginTop="5dp"
+            android:textSize="20sp"
             android:layout_marginLeft="10dp"/>
 
     </RelativeLayout>

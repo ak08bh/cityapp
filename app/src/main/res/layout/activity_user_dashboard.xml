@@ -41,6 +41,7 @@
         <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
+            android:onClick="callRetailerScreens"
             android:src="@drawable/splash_screen_background"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
