@@ -24,6 +24,9 @@ public class RetalierStartupScreen extends AppCompatActivity {
         startActivity(new Intent(RetalierStartupScreen.this,Login.class));
     }
 
-
+    public  void callSignupScreen(View view)
+    {
+        startActivity(new Intent(RetalierStartupScreen.this,SignUp.class));
+    }
 
 }

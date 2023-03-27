@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".Common.LoginSignup.SignUp"
     android:background="@color/colorPrimary"
+    android:scrollbars="none"
     android:padding="30dp">
 
     <LinearLayout
@@ -105,28 +106,6 @@
                     android:fontFamily="@font/muli_semibold"
                     android:textColor="@color/black"
                     android:inputType="textEmailAddress"/>
-
-            </com.google.android.material.textfield.TextInputLayout>
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:hint="Phone Number"
-                app:hintTextColor="@color/black"
-                app:boxStrokeColor="@color/black"
-                android:textColorHint="@color/black"
-                app:boxStrokeWidthFocused="2dp"
-                app:startIconDrawable="@drawable/ic_baseline_phone_24"
-                app:startIconTint="@color/black"
-                app:endIconMode="clear_text"
-                app:endIconTint="@color/black">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/muli_semibold"
-                    android:textColor="@color/black"
-                    android:inputType="phone"/>
 
             </com.google.android.material.textfield.TextInputLayout>
             <com.google.android.material.textfield.TextInputLayout
